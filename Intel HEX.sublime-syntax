@@ -1,0 +1,25 @@
+%YAML 1.2
+---
+name: Intel HEX
+file_extensions: [hex, HEX, I8HEX, I16HEX, I32HEX]
+scope: source.hex
+
+variables:
+  nible: '[a-fA-F\d]'
+
+contexts:
+  main:
+    
+    - match: ^(:)({{nible}}{2})({{nible}}{4})({{nible}}{2})({{nible}}*?)({{nible}}{2})$
+      scope: hex.record
+      captures:
+        1: punctuation.definition.record.begin
+        2: constant.numeric.byte-count
+        3: entity.name.address
+        4: keyword.record-type
+        5: variable.function.data
+        6: comment.block.checksum
+    - match: '[^:a-fA-F\d\n\r]'
+      scope: invalid.illegal.character
+    - match: '^[^:]*'
+      scope: invalid.malformed-record
