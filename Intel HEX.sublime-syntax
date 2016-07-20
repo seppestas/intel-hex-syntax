@@ -19,7 +19,7 @@ contexts:
         4: keyword.record-type
         5: variable.function.data
         6: comment.block.checksum
-    - match: '[^:a-fA-F\d\n\r]'
-      scope: invalid.illegal.character
     - match: '^[^:]*'
       scope: invalid.malformed-record
+    - match: '[^:a-fA-F\d\n\r]'
+      scope: invalid.illegal.character
