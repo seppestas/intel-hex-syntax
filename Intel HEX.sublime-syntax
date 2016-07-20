@@ -14,11 +14,11 @@ contexts:
       scope: hex.record
       captures:
         1: punctuation.definition.record.begin
-        2: constant.numeric.byte-count
-        3: entity.name.address
-        4: keyword.record-type
-        5: variable.function.data
-        6: comment.block.checksum
+        2: constant.numeric.record.byte-count
+        3: entity.name.record.address
+        4: keyword.record.type
+        5: variable.function.record.data
+        6: comment.block.record.checksum
     - match: '^[^:]*'
       scope: invalid.malformed-record
     - match: '[^:a-fA-F\d\n\r]'
