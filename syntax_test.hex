@@ -1,0 +1,21 @@
+# SYNTAX TEST "Packages/User/Intel HEX/Intel HEX.sublime-syntax"
+:100000000020002081060000AD060000AD060000C3
+# <- source.hex hex.record punctuation.definition.record.begin
+#^^ constant.numeric.record.byte-count
+#  ^^^^ entity.name.record.address
+#      ^^ keyword.record.type
+#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variable.function.record.data
+#                                        ^^ comment.block.record.checksum
+
+:00000001FF
+#      ^^ keyword.record.type
+#        ^^ comment.block.record.checksum
+
+:10002000AD06hi!0000AD060000AD06000004
+#            ^^^ invalid.illegal.character
+
+Hello, world
+# <- invalid.malformed-record
+
+:123456789
+# <- source.hex
