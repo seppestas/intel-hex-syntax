@@ -7,6 +7,8 @@ It's designed to help with inspecting your hex files by setting a different
 color for a record's length, address, type, data and checksum allowing to
 more easily distinguish them.
 
+![screenshot](images/screenshot.png)
+
 The scopes have been somewhat hackisly chosen to be consistent with the
 [Intel_HEX template on Wikipedia](https://en.wikipedia.org/wiki/Template:Intel_HEX)
 when using Sublime Text's default Monokai color scheme. They have no other
