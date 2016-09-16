@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Sublime Text 2 tmLanguage File -->
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>hex</string>
+		<string>HEX</string>
+		<string>I8HEX</string>
+		<string>I16HEX</string>
+		<string>I32HEX</string>
+	</array>
+	<key>name</key>
+	<string>Intel HEX</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.record.begin</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.record.byte-count</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.record.address</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.record.type</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.record.data</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
+					<string>comment.block.record.checksum</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^(:)([a-fA-F\d]{2})([a-fA-F\d]{4})([a-fA-F\d]{2})([a-fA-F\d]*?)([a-fA-F\d]{2})$</string>
+			<key>scope</key>
+			<string>hex.record</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^[^:]*</string>
+			<key>name</key>
+			<string>invalid.malformed-record</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[^:a-fA-F\d\n\r]</string>
+			<key>name</key>
+			<string>invalid.illegal.character</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.hex</string>
+</dict>
+</plist>
