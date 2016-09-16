@@ -14,6 +14,4 @@ The scopes have been somewhat hackisly chosen to be consistent with the
 when using Sublime Text's default Monokai color scheme. They have no other
 meaning in any way.
 
-Since this syntax definition was made using a new [`.sublime-syntax` file](https://www.sublimetext.com/docs/3/syntax.html)
-introduced in ST3, this package will not work in ST2. Feel free to send a PR
-if you want to provide a `.tmLanguage` file to support ST2.
+Thanks to @vaibhavbhat16 for providing the `.tmLanguage` file to support ST2.
